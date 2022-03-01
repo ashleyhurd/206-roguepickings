@@ -1,22 +1,22 @@
-html {
-	font-size: 16px;
+html{
+    font-size: 16px;
 }
 
 body {
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	display: flex;
-  justify-content: center;
-  align-items: center;
-	font-size: 1em;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
 }
 
-.container{
+.container {
 	max-width: 1200px;
-	width: 90%;
-	display: flex;
-  justify-content: center;
-  align-items: center;
-	flex-flow: row wrap;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 h1,
@@ -42,44 +42,49 @@ p {
 }
 
 ul {
-	margin: 0;
+    margin: 0;
 }
 
 /*The widths are in a percentage!*/
 header {
 	border-bottom: 3px solid #77a466;
-	text-align: center;
-	width: 100%;
-	display: flex;
-  justify-content: center;
-  align-items: center;
-	flex-flow: row wrap;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 header h1 {
 	margin: 0;
-	padding: 38px 20px 20px 20px;
+    padding: 38px 20px 20px 20px; 
+    border-bottom: 3px solid #77a466; 
+    width: 100%;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	padding: 20px 0;
-	width: 100%;
+    padding: 20px 0; 
+    width: 100%; 
 }
+
 header nav ul {
 	margin: 0;
 	padding: 0;
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	padding: 0 10px;
-	list-style: none;
+    padding: 10px 0;
+    list-style: none;
 }
-header nav ul li a{
+
+header nav ul li a {
 	text-decoration: none;
 	color:#77a466;
 }
@@ -87,15 +92,12 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	display: flex;
-  justify-content: center;
-  align-items: center;
-	flex-flow: row wrap;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
-.main-image {
-}
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
@@ -104,8 +106,9 @@ header nav ul li a{
 .main-title h2 {
 	text-align: left;
 	padding: 5px 0;
-	color: #77a466;
+    color: #77a466;
 }
+
 .main-title p {
 	padding: 0;
 	font-size: 1em;
@@ -115,16 +118,15 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 100%;
-	border-top: 1px solid #eee;
-}
-
+    border-top: 1px solid #eee;
+    width: 100%;
 }
 
 .menu {
 	list-style: none;
 	padding: 0;
 }
+
 .menu li {
 	padding: 10px 0;
 	color:#77a466;
@@ -144,11 +146,12 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
-	text-align: center;
-	display: flex;
-  justify-content: center;
-  align-items: center;
-	flex-flow: row wrap;
+    text-align: center;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 footer span {
@@ -158,39 +161,45 @@ footer span {
 	font-size: .875em;
 }
 
+@media only screen and (min-width: 768px) {
+    .bottom-section{
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+    }
 
-@media all and (min-width:768px) {
-		.bottom-section{
-			justify-content: space-between;
-			align-items: flex-start;
-			border-top: 1px solid #eee;
-		}
-		.section-one,
-		.section-two,
-		.section-three{
-			border-top: none;
-			flex-basis: 30%
-		}
+    .section-one,
+    .section-two,
+    .section-three {
+        border-top: none;
+        flex-basis: 30%;
+    }
 
-		.section-two{
-			border-left: 1px solid #eee;
-			border-right: 1px solid #eee;
-			padding: 0 20px;
-		}
+    .section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
+    }
 }
 
-@media all and (min-width:1200px) {
-		header h1{
-			width: 30%;
-			padding: 0;
-			border-bottom: none;
-			text-align: left;
-		}
-		header nav {
-			width: 40%;
-		}
-		header nav ul {
-			display: flex;
-			justify-content: space-between;
-		}
+@media only screen and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        width: 30%;
+        padding: 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
